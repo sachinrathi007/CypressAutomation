@@ -1,0 +1,14 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "es2018",
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "moduleResolution": "node",
+        "lib": ["es5", "dom"],
+        "types": ["cypress", "node"]
+    },
+    "include": ["cypress", "**/*.ts"],
+    "exclude": ["node_modules"]
+}
