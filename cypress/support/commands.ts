@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 
+import * as _ from "cypress/types/lodash";
 import selectors from "selectors";
 import routes from "../../routes";
 
@@ -43,14 +44,11 @@ Cypress.Commands.add("searchFlight", () => {
 
 /* Getting flight info and print out it */
 Cypress.Commands.add("getFlight", (orig: string, dest: string) => {
-  cy.get('button:contains("€")', { timeout: 6000 })
+  cy.get(selectors.firstFlightFare, { timeout: 6000 })
     .should("be.visible")
     .first()
-    .children()
-    .contains("€")
     .invoke("text")
     .then((text) => {
-      expect(text).contains("€");
       cy.log(`Price for first available fligt 
                           from ${orig} to ${dest} 
                           is: ${text}`);
