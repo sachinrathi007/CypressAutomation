@@ -9,4 +9,5 @@ export default {
   selBtn: "button",
   orig: ".route-selection-origin",
   dest: ".route-selection-destination",
+  firstFlightFare: "button[type=button] div div div"
 };
